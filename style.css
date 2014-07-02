@@ -4,7 +4,7 @@
  * Description: A lightweight and responsive WordPress theme. This is a simple, effective and beautiful theme for bloggers or magazine websites. Get ready to socialize!
  * Author: Slocum Design Studio
  * Author URI: http://slocumthemes.com/
- * Version: 1.1.7
+ * Version: 1.2.3
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl.html
  * Tags: blue, green, orange, pink, purple, red, white, light, two-columns, left-sidebar, fluid-layout, custom-colors, custom-menu, editor-style, featured-images, full-width-template, sticky-post, theme-options, threaded-comments
@@ -381,7 +381,7 @@ article.content a:hover, .widget-fullbody a:hover, #post-author a:hover{
 	color: #5d5d5d;
 }
 
-h1.site-title{
+.site-title{
 	font-size: 98px;
 	font-weight: 900;
 	line-height: 1em;
@@ -391,9 +391,10 @@ h1.site-title{
 	text-transform: uppercase;
 }
 
-h2.slogan{
+.slogan{
 	font-weight: 300;
 	margin-top: 0;
+	margin-bottom: 0.85em;
 	line-height: 1em;
 	font-size: 24px;
 }
@@ -824,8 +825,8 @@ article.post-content p{
 /* -----  Home Post Button  ------*/
 
 section.post a.post-button,
-.post-edit-link, .button,
-input[type=submit], input[type=reset]{
+.post-edit-link, .post-button,
+input[type=submit], input[type=reset], .button {
 	width: 100%;
 	background: #949494;
 	color: #fff;
@@ -857,8 +858,8 @@ section.post a.post-edit-link {
 
 section.post a.post-button:hover, section.widget #searchform input.submit:hover, #searchform input.submit:hover,
 section.widget form.register input[type=submit]:hover, .widget .social-media-icons a:hover,
-ul.page-numbers li a.page-numbers:hover, section.post article.post-content a.post-edit-link:hover, .button:hover,
-input[type=submit]:hover, input[type=reset]:hover{
+ul.page-numbers li a.page-numbers:hover, section.post article.post-content a.post-edit-link:hover, .post-button:hover,
+input[type=submit]:hover, input[type=reset]:hover , .button:hover {
 	background: #5d5d5d;
 	color: #fff;
 }
@@ -869,9 +870,65 @@ section.post article.post-content a.post-edit-link:hover {
 
 section.post a.post-button:active, section.widget #searchform input.submit:active, #searchform input.submit:active,
 section.widget form.register input[type=submit]:active, .widget .social-media-icons a:active,
-ul.page-numbers li a.page-numbers:active, section.post article.post-content a.post-edit-link:active, .button:active,
-input[type=submit]:active, input[type=reset]:active{
+ul.page-numbers li a.page-numbers:active, section.post article.post-content a.post-edit-link:active, .post-button:active,
+input[type=submit]:active, input[type=reset]:active, .button:active {
 	background: #3b3b3b;
+}
+
+
+/* ------------------
+ * bbPress/BuddyPress
+   ------------------ */
+.bbp-breadcrumb p {
+	margin-top: 0;
+}
+
+#subscription-toggle {
+	margin-bottom: 1em;
+	float: right;
+}
+
+#bbpress-forums div.bbp-the-content-wrapper div.quicktags-toolbar {
+	overflow: auto;
+}
+
+#bbpress-forums div.bbp-the-content-wrapper input {
+	width: auto;
+	text-transform: none;
+}
+
+#bbpress-forums div.bbp-search-form {
+	margin-bottom: 1em;
+}
+
+#bbpress-forums #bbp-search-form #bbp_search {
+	width: 64%;
+	padding: 0.38em 0.30em;
+	display: inline-block;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	vertical-align: middle;
+}
+
+#bbp_search_submit {
+	padding: 0.70em 0.30em;
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#bbp_topic_submit {
+	padding: 0.75em 0.5em;
+	cursor: pointer;
+}
+
+.wp-editor-area.bbp-the-content {
+	border: 1px solid #eee;
+	border-top: none;
+}
+
+#bbpress-forums section.post {
+	max-width: 99%;
 }
 
 /* -----  Pagination  ------*/
@@ -1024,12 +1081,18 @@ section.widget.after-posts-widget h3.widget-title {
 	margin-left: -5.5%;
 }
 
-section.widget.after-posts-widget ul li {
+section.widget.after-posts-widget.widget_meta ul li,
+section.widget.after-posts-widget.widget_recent_entries ul li,
+section.widget.after-posts-widget.widget_recent_comments ul li,
+section.widget.after-posts-widget.widget_rss ul li {
 	width: 114.5%;
 	margin-left: -8.65%;
 }
 
-section.widget.after-posts-widget ul li li {
+section.widget.after-posts-widget.widget_meta ul li li,
+section.widget.after-posts-widget.widget_recent_entries ul li li,
+section.widget.after-posts-widget.widget_recent_comments ul li li,
+section.widget.after-posts-widget.widget_rss ul li li {
 	width: auto;
 	margin-left: 0;
 }
@@ -1414,18 +1477,36 @@ section.widget img{
 
 /* -----  Link List  ------*/
 section.widget ul {
-	margin-top: -10px;
-	margin-bottom: -20px;
+	margin-left: 1em;
+	list-style: square;
 }
 
-section.widget ul li{
+section.widget_meta ul,
+section.widget_recent_entries ul,
+section.widget_recent_comments ul,
+section.widget_rss ul,
+section.widget_nav_menu ul {
+	margin-left: 0;
+	margin-top: -10px;
+	margin-bottom: -20px;
+	list-style: none;
+}
+
+section.widget_meta ul li,
+section.widget_recent_entries ul li,
+section.widget_recent_comments ul li,
+section.widget_rss ul li,
+section.widget_nav_menu ul li {
 	width: 116%;
 	margin-left: -8%;
 	display: block;
 	border-bottom: 1px solid #cfd3d5;
 }
-
-section.widget ul li:last-child {
+section.widget_meta ul li:last-child,
+section.widget_recent_entries ul li:last-child,
+section.widget_recent_comments ul li:last-child,
+section.widget_rss ul li:last-child,
+section.widget_nav_menu ul li:last-child {
 	border-bottom: none;
 }
 
@@ -1434,19 +1515,31 @@ section.widget ul li.recentcomments {
 	padding: 15px 7%;
 }
 
-section.widget ul ul {
+section.widget_meta ul ul,
+section.widget_recent_entries ul ul,
+section.widget_recent_comments ul ul,
+section.widget_rss ul ul,
+section.widget_nav_menu ul ul {
 	margin-top: 0;
 	padding-bottom: 20px;
 	border-top: 1px solid #cfd3d5;
 }
 
-section.widget ul li li {
+section.widget_meta li li,
+section.widget_recent_entries li li,
+section.widget_recent_comments li li,
+section.widget_rss li li,
+section.widget_nav_menu li li {
 	width: auto;
 	margin-left: 0;
 	padding-left: 5%;
 }
 
-section.widget ul li a{
+section.widget_meta ul li a,
+section.widget_recent_entries ul li a,
+section.widget_recent_comments ul li a,
+section.widget_rss ul li a,
+section.widget_nav_menu ul li a {
 	width: 86%;
 	padding: 15px 7%;
 	text-decoration: none;
@@ -1458,13 +1551,21 @@ section.widget ul li a{
 	transition: all .5s ease-in-out;
 }
 
-section.widget ul li a:hover{
+section.widget_meta ul li a:hover,
+section.widget_recent_entries ul li a:hover,
+section.widget_recent_comments ul li a:hover,
+section.widget_rss ul li a:hover,
+section.widget_nav_menu ul li a:hover {
 	background: #5d5d5d;
 	color: #fff;
 	text-decoration: none;
 }
 
-section.widget ul li a:active{
+section.widget_meta ul li a:active,
+section.widget_recent_entries ul li a:active,
+section.widget_recent_comments ul li a:active,
+section.widget_rss ul li a:active,
+section.widget_nav_menu ul li a:hover {
 	background: #2d4046;
 }
 
@@ -1692,12 +1793,20 @@ aside.header-widget-container section.widget:first-child {
 	margin-top: 0;
 }
 
-aside.header-widget-container section.widget ul li {
+aside.header-widget-container section.widget_meta ul li,
+aside.header-widget-container section.widget_recent_entries ul li,
+aside.header-widget-container section.widget_recent_comments ul li,
+aside.header-widget-container section.widget_rss ul li,
+aside.header-widget-container section.widget_nav_menu ul li {
 	width: 100%;
 	margin-left: 0;
 }
 
-aside.header-widget-container section.widget ul li li {
+aside.header-widget-container section.widget_meta ul li li,
+aside.header-widget-container section.widget_recent_entries ul li li,
+aside.header-widget-container section.widget_recent_comments ul li li,
+aside.header-widget-container section.widget_rss ul li li,
+aside.header-widget-container section.widget_nav_menu ul li li {
 	width: auto;
 }
 
@@ -2148,7 +2257,7 @@ form.mc-gravity, form.mc_gravity, form.mc-newsletter, form.mc_newsletter {
 		margin-bottom: 1.5em;
 	}
 
-	h1.site-title{
+	.site-title{
 		/*margin-top: 40px;*/
 	}
 
@@ -2511,12 +2620,12 @@ form.mc-gravity, form.mc_gravity, form.mc-newsletter, form.mc_newsletter {
 
 	}
 
-	h1.site-title{
+	.site-title{
 		/*margin-top: 40px;*/
 		font-size: 42px;
 	}
 
-	h2.slogan{
+	.slogan{
 		font-size: 16px;
 	}
 

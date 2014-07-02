@@ -120,20 +120,20 @@ article.content h1.page-title, h1.page-title a, article.content h2.page-title, h
 }
 
 section.post a.post-button,
-.post-edit-link, .button, input[type=submit]{
+.post-edit-link, .post-button, input[type=submit], .button {
 	background: #3c639a;
 	border-top: 1px solid #cfd1d5;
 }
 
 section.post a.post-button:hover, section.widget #searchform input.submit:hover, #searchform input.submit:hover,
 section.widget form.register input[type=submit]:hover, .widget .social-media-icons a:hover,
-ul.page-numbers li a.page-numbers:hover, section.post article.post-content a.post-edit-link:hover, .button:hover, input[type=submit]:hover {
+ul.page-numbers li a.page-numbers:hover, section.post article.post-content a.post-edit-link:hover, .post-button:hover, input[type=submit]:hover, .button:hover {
 	background: #2c4770;
 }
 
 section.post a.post-button:active, section.widget #searchform input.submit:active, #searchform input.submit:active,
 section.widget form.register input[type=submit]:active, .widget .social-media-icons a:active,
-ul.page-numbers li a.page-numbers:active, section.post article.post-content a.post-edit-link:active, .button:active, input[type=submit]:active {
+ul.page-numbers li a.page-numbers:active, section.post article.post-content a.post-edit-link:active, .post-button:active, input[type=submit]:active, .button:active {
 	background: #1d2f4a;
 }
 
