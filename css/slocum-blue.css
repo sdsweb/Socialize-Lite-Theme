@@ -303,6 +303,24 @@ section.footer-widget-container section.widget .social-media-icons a:active, sec
 	background: #3c639a;
 }
 
+/* WooCommerce */
+
+.woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce #content nav.woocommerce-pagination ul li a:hover, .woocommerce #content nav.woocommerce-pagination ul li a:focus,
+.woocommerce-page nav.woocommerce-pagination ul li a:hover, .woocommerce-page #content nav.woocommerce-pagination ul li a:hover,
+.woocommerce-page #content nav.woocommerce-pagination ul li a:focus {
+	color: #fff !important;
+	background: #2c4770 !important;
+}
+
+.woocommerce nav.woocommerce-pagination ul li a:active, .woocommerce nav.woocommerce-pagination ul li a:active,
+.woocommerce #content nav.woocommerce-pagination ul li a:active, .woocommerce #content nav.woocommerce-pagination ul li a:active,
+.woocommerce-page nav.woocommerce-pagination ul li a:active, .woocommerce-page #content nav.woocommerce-pagination ul li a:active,
+.woocommerce-page #content nav.woocommerce-pagination ul li a:active {
+	color: #fff !important;
+	background: #1d2f4a !important;
+}
+
 @media only screen and (max-width : 740px) {
 	
 	

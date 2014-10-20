@@ -2,9 +2,17 @@
 Theme: Socialize Lite
 Author: Slocum Themes/Slocum Design Studio
 Author URI: http://slocumthemes.com
-Current Version: 1.2.3
+Current Version: 1.2.4
 ==========================================
 
+
+1.2.4 // October 16 2014
+------------------------
+- Updated to latest version of SDS Core
+- Added CSS classes on sidebar containers for better CSS targeting (added "widgets" and "no-widgets" classes)
+- Added WooCommerce support
+- Adjusted "mc-gravity" support to allow for multiple CSS classes
+- Updated POT file
 
 1.2.3 // July 02 2014
 ---------------------
