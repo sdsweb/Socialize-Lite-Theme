@@ -5,6 +5,18 @@ Author URI: http://slocumthemes.com
 Current Version: 1.2.4
 ==========================================
 
+1.2.5 // November 21 2014
+-------------------------
+- Updated to latest version of SDS Core
+- Added editor styles to post editor to match front-end display
+- Changed add_filter() function on 'wp_head' action to add_action()
+- Added WordPress 4.1 title-tag support and moved all meta tags from <head> element to 'wp_head'
+- Adjusted Cusotomizer CSS selector for Site Title
+- Reorganized file structure
+- Updated theme description
+- Minor adjustments to CSS
+- Fixed possible PHP warning with "mc-gravity" Gravity Forms functionality
+- Fixed "mc-gravity" functionality for checking if form contained correct CSS classes
 
 1.2.4 // October 16 2014
 ------------------------
