@@ -302,7 +302,7 @@ if ( ! function_exists( 'sds_copyright_branding' ) ) {
 	add_filter( 'sds_copyright_branding', 'sds_copyright_branding', 10, 2 );
 
 	function sds_copyright_branding( $text, $theme_name ) {
-		return '<a href="http://slocumthemes.com/wordpress-themes/socialize-lite/" target="_blank">' . sprintf( __( '%1$s by Slocum Studio', 'socialize' ), $theme_name ) . '</a>';
+		return '<a href="https://slocumthemes.com/wordpress-themes/socialize-lite/" target="_blank">' . sprintf( __( '%1$s by Slocum Studio', 'socialize' ), $theme_name ) . '</a>';
 	}
 }
 

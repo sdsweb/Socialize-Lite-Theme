@@ -9,7 +9,7 @@
 		<!-- Post Header -->	
 		<header class="post-header">
 			<p class="post-date">
-				<?php the_time( 'F j, Y' ); ?>
+				<?php the_time( get_option( 'date_format' ) ); ?>
 			</p>
 			<aside class="post-author">
 				<figure class="author-avatar">
