@@ -3,7 +3,7 @@
  * This class manages all functionality with our Socialize theme.
  */
 class Socialize {
-	const SOC_VERSION = '1.2.6';
+	const SOC_VERSION = '1.2.7';
 
 	private static $instance; // Keep track of the instance
 
