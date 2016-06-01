@@ -852,6 +852,10 @@ article.post-content p{
 	line-height: 1.6em;
 }
 
+ol {
+    padding-left: 0;
+    margin-left: 1em;
+}
 
 /* -----  Home Post Button  ------*/
 
